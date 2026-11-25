@@ -8,29 +8,60 @@
 </head>
 <body>
     <div class="hero">
-        <img src="./images/logo2.png">
+        <div class="logo-div">
+            <img src="./images/logo1.png" class="logo1">
+            <img src="./images/logo2.png" class="logo2">
+        </div>
         <div class="timer-box">
             <div>
                 <span class="time-span months">0</span>
                 <span>Months</span>
             </div>
             <div>
-                <span class="time-span days">22</span>
-                <span>Months</span>
+                <span class="time-span days">33</span>
+                <span>Days</span>
             </div>
             <div>
-                <span class="time-span hours">12</span>
-                <span>Months</span>
+                <span class="time-span hours"></span>
+                <span>Hours</span>
             </div>
             <div>
-                <span class="time-span minutes">45</span>
-                <span>Months</span>
+                <span class="time-span minutes">34</span>
+                <span>Minutes</span>
             </div>
             <div>
-                <span class="time-span seconds">56</span>
-                <span>Months</span>
+                <span class="time-span seconds"></span>
+                <span>Seconds</span>
             </div>
         </div>
     </div>
+    <script>
+        let daysCountdown = document.querySelector(".days");
+        let hoursCountdown = document.querySelector(".hours");
+        let minutesCountdown = document.querySelector(".minutes");
+        let secondsCountdown = document.querySelector(".seconds");
+        setInterval(function countdown(){
+    countDownTime = new Date("Dec 17, 2026 23:59:59").getTime();
+    currentDate = new Date().getTime();
+    dateDiff = countDownTime - currentDate;
+
+
+
+
+
+    let days = Math.floor(dateDiff / (1000 * 60 * 60 * 24));
+    daysCountdown.innerHTML = days;
+    let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    hoursCountdown.innerHTML = hours;
+    let minutes = Math.floor(dateDiff % (1000 * 60 * 60) / (1000 * 60));
+    minutesCountdown.innerHTML = minutes;
+    let seconds = Math.floor(dateDiff % (1000 * 60) / (1000));
+    secondsCountdown.innerHTML = seconds;
+    if (days <= 0 && hours <= 0 && minutes <= 0 && seconds <= 0){
+    clearInterval(countdown());
+    hoursCountdown.innerHTML = "0";
+}
+}, 1000);
+    </script>
 </body>
 </html>
