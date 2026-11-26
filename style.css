@@ -13,6 +13,7 @@
 body{
     background-image: url("./images/countdown-img.jpeg");
     background-attachment: fixed;
+    overflow-x: hidden;
     background-repeat: no-repeat;
 }
 .hero{
@@ -148,18 +149,26 @@ body{
     height: auto;
     margin-right: 900px;
 }
+.new-avengers > img{
+    width: 210px;
+    height: auto;
+    margin-right: 900px;
+}
 .carousel{
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 90%;
-    height: 240px;
+    height: 350px;
     overflow: hidden;
     margin-top: 20px;
 }
 .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
-    width: 210px;
+    width: 250px;
     height: 100%;
     background-color: black;
     overflow: hidden;
@@ -167,9 +176,13 @@ body{
     margin-left: 30px;
 }
 .item > img{
-    width: 400px;
+    width: 250px;
     height: auto;
     object-fit: cover;
-    margin-left: -70px;
     margin-top: 0px;
+}
+
+.doom{
+    margin-top: 50px;
+    height: 380px;
 }
