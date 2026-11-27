@@ -9,4 +9,4 @@ A countdown for doomsday, the final trailer video embedded, and the hall of fame
 ## Gallery!!
 
 
-### MAde with <3 by @Aref for all marvelers
+Made with <3 by @Aref for all marvelers
